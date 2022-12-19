@@ -60,6 +60,7 @@ class ClsHead(BaseHead):
     def loss(self, feats: Tuple[torch.Tensor],
              data_samples: List[ClsDataSample], **kwargs) -> dict:
         """Calculate losses from the classification score.
+
         Args:
             feats (tuple[Tensor]): The features extracted from the backbone.
                 Multiple stage inputs are acceptable but only the last stage
@@ -68,6 +69,7 @@ class ClsHead(BaseHead):
             data_samples (List[ClsDataSample]): The annotation data of
                 every samples.
             **kwargs: Other keyword arguments to forward the loss module.
+
         Returns:
             dict[str, Tensor]: a dictionary of loss components
         """
@@ -119,6 +121,7 @@ class ClsHead(BaseHead):
             data_samples (List[ClsDataSample], optional): The annotation
                 data of every samples. If not None, set ``pred_label`` of
                 the input data samples. Defaults to None.
+
         Returns:
             List[ClsDataSample]: A list of data samples which contains the
             predicted results.
